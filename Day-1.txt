@@ -1,0 +1,10 @@
+Write a blog on Difference between HTTP1.1 vs HTTP2
+HTTP Stand for HyperText Transfer Protocol
+http1.1 was created in 1997 and http2 was created in 2015
+HTTP2 is much faster and more reliable than HTTP1. HTTP1 loads a single request for every TCP connection.
+http1.1 works on the textual format and http2 works on the binary protocol
+In http1.1 head of line blocking that blocks all the requests behind it until it doesn’t get its all resources.
+In http2 It allows multiplexing so one TCP connection is required for multiple requests
+In http1.1 compresses data by itself and in http2 It uses HPACK for data compression.
+Small files load more quickly than large ones. To speed up web performance, both HTTP/1.1 and HTTP/2 compress HTTP messages to make them smaller.
+HTTP/2 uses a more advanced compression method called HPACK that eliminates redundant information in HTTP header packets.
