@@ -13,3 +13,20 @@ Increased security – Web browsers only support HTTP/2 via encrypted connection
 ................................................................................................................................
 
 write a blog about objects and its internal representation in javascript?
+A JavaScript object is a collection of named values having state and behavior
+Objects, in JavaScript, is it’s most important data-type and forms the building blocks
+objects are quite different from JavaScript’s primitive data-types(Number, String, Boolean, null, undefined and symbol) 
+ objects in JavaScript may be defined as an unordered collection of related data, of primitive or reference types, in the form of “key: value” pairs.
+we can define a property by assigning it a value
+objects can contain many values.
+var car = {
+  name = "Ajith",
+  Age = 25,
+  Salery = 25000,
+  isStudent = true
+}
+object can store many value like string,number,array and etc
+The syntax for adding a property to an object is 
+ObjectName.ObjectProperty = propertyValue;
+The syntax for deleting a property from an object is
+delete ObjectName.ObjectProperty;
