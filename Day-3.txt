@@ -1,1 +1,69 @@
+for the given JSON iterate over all for loops (for,forin,forof,foreach)?
+for...
+let Array = [1,2,3,4,5];
+for (i=1; i<=Array.length; i++){ 
+    var n = Math.floor(i*2);
+    console.log (n);
+}
 
+forin...
+let Array = [1,2,3,4,5];
+for(let index in Array){
+console.log(index);
+}
+
+forof...
+let Array = [1,2,3,4,5];
+for(let value of Array){
+console.log(value);
+}
+
+for each...
+let sum = 0;
+let numbers = [1,2,3,4,5];
+numbers.forEach(myFunction);
+
+function myFunction(item) {
+  sum += item;
+}
+console.log(sum);
+
+Create your own resume in JSON format
+let Resume ={
+        basics: {
+          name : "Ajith",  
+          "email" : "ajith04deva@gmail.com",
+          'phone' : 9876543210,
+          "degree": "Bachlor of Engineering",
+          "location": {
+            "address": "Poonamalle",
+            "postalCode": 600056,
+            "city" :"chennai",
+            "countryCode" :"India",
+            "region": "TamilNadu"
+          }
+},
+"education": [
+    {
+      institution : "Kathir College Of Engineering",
+      area : "Coimbatore",
+      Yearofpassing : 2018,
+      gpa : 7.4,
+      courses : "Mechanical Engineering" 
+  }
+], skills: 
+    {
+      name : "Full Stack Developer",
+      level : "Starting level",
+      keywords:["javascript",'html','css','bootstrap','Angular','Reactjs','mySQL','mongodb']
+    },interest :
+  {
+    sports : "cricket",
+    Driving : ["bike","car"]
+  },languages: 
+    {
+      "language": ["Tamil","English"],
+      "fluency": "Fluent"
+    },
+}
+    console.log(Resume);
