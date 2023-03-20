@@ -28,7 +28,8 @@ function myFunction(item) {
 }
 console.log(sum);
 
-Create your own resume in JSON format
+Create your own resume in JSON format?
+
 let Resume ={
         basics: {
           name : "Ajith",  
