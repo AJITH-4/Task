@@ -1,1 +1,181 @@
+1)
 
+let obj1 = {name : "person 1" , age : 5};
+let obj2 = {age : 5, name : "person 1"};
+// console.log((JSON.stringify(obj1))===(JSON.stringify(obj2)));
+// let key1 = Object.keys(obj1);
+
+// console.log(Object.entries(obj1) == Object.entries(obj2));
+let objEqual = false;
+let obj1Keys = Object.keys(obj1).sort();
+let obj2Keys = Object.keys(obj2).sort();
+if (obj1Keys.length !== obj2Keys.length) {
+  console.log(objEqual);
+} else {
+  let areEqual = obj1Keys.every((key, index) => {
+    let objValue1 = obj1[key];
+    let objValue2 = obj2[obj2Keys[index]];
+    return objValue1 === objValue2;
+  });
+  if (areEqual) {
+    objEqual = true;
+    console.log(objEqual);
+  } else {
+    console.log(objEqual);
+  }
+}
+
+------------------------------------------------------------------------------------------------------------------
+
+2)
+
+<!DOCTYPE html>
+<html>
+    <head>
+         <title>Day-4 Task</title> 
+    </head>
+
+    <body>
+        <script>
+            let xhr = new XMLHttpRequest ();
+
+            xhr.open("GET", 'https://restcountries.com/v3.1/all', true);
+
+            xhr.onload =function(){
+               let response = JSON.parse (xhr.responseText);
+               for(let i = 0; i<response.length; i++){
+                console.log(response[i].flag);
+               }
+               
+
+            };
+
+            xhr.send();
+
+        </script>
+    </body>
+</html>
+
+-------------------------------------------------------------------------------------------------
+
+3) a
+
+<!DOCTYPE html>
+<html>
+    <head>
+         <title>Day-4 Task</title> 
+    </head>
+
+    <body>
+        <script>
+            let xhr = new XMLHttpRequest ();
+
+            xhr.open("GET", 'https://restcountries.com/v3.1/all', true);
+
+            xhr.onload =function(){
+               let response = JSON.parse (xhr.responseText);
+               for(let i = 0; i<response.length; i++){
+                console.log(response[i].capital[0]);
+               }
+               
+
+            };
+
+            xhr.send();
+
+        </script>
+    </body>
+</html>
+
+-------------------------------------------------------------------------------------------------
+
+3)b
+
+<!DOCTYPE html>
+<html>
+    <head>
+         <title>Day-4 Task</title> 
+    </head>
+
+    <body>
+        <script>
+            let xhr = new XMLHttpRequest ();
+
+            xhr.open("GET", 'https://restcountries.com/v3.1/all', true);
+
+            xhr.onload =function(){
+               let response = JSON.parse (xhr.responseText);
+               for(let i = 0; i<response.length; i++){
+                console.log(response[i].region);
+               }
+               
+
+            };
+
+            xhr.send();
+
+        </script>
+    </body>
+</html>
+
+--------------------------------------------------------------------------------------------------------------
+
+3)c
+
+<!DOCTYPE html>
+<html>
+    <head>
+         <title>Day-4 Task</title> 
+    </head>
+
+    <body>
+        <script>
+            let xhr = new XMLHttpRequest ();
+
+            xhr.open("GET", 'https://restcountries.com/v3.1/all', true);
+
+            xhr.onload =function(){
+               let response = JSON.parse (xhr.responseText);
+               for(let i = 0; i<response.length; i++){
+                console.log(response[i].subregion);
+               }
+               
+
+            };
+
+            xhr.send();
+
+        </script>
+    </body>
+</html>
+
+-------------------------------------------------------------------------------------------------------------------
+
+3) d
+
+<!DOCTYPE html>
+<html>
+    <head>
+         <title>Day-4 Task</title> 
+    </head>
+
+    <body>
+        <script>
+            let xhr = new XMLHttpRequest ();
+
+            xhr.open("GET", 'https://restcountries.com/v3.1/all', true);
+
+            xhr.onload =function(){
+               let response = JSON.parse (xhr.responseText);
+               for(let i = 0; i<response.length; i++){
+                console.log(response[i].population);
+               }
+               
+
+            };
+
+            xhr.send();
+
+        </script>
+    </body>
+</html>
