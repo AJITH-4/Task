@@ -1,1 +1,32 @@
+Day 07:ARRAY METHODS
 
+a) Get all the countries from the Asia continent /region using the Filter function
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Document</title>
+    </head>
+    <body>
+        <script src="script1.js"></script>
+    </body>
+</html>
+
+script1.js
+
+let request = new XMLHttpRequest();
+request.open("GET","https://restcountries.com/v3.1/all");
+request.send();
+request.onload = function(){
+    let res = JSON.parse(request.response);
+    console.log(res);
+    // for(i=0; i<res.length; i++){
+    //     console.log(res[i].name);
+
+    // }
+    var ceur = res.filter((ele) => ele.region =="Asia");
+    console.log(ceur);
+    
+}
+
+b) Get all the countries with a population of less than 2 lakhs using Filter function
