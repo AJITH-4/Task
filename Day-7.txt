@@ -1,3 +1,47 @@
+1.// a) Write a constructor for the class Movie, which takes a String representing the title of the movie, 
+        a String representing the studio, and a String representing the rating as its arguments, and sets the 
+        respective class properties to these values.
+
+class movie {
+  constructor(title, studio, rating) {
+    this.title = title;
+    this.studio = studio;
+    this.rating = rating;
+  }
+
+  getrating() {
+    return "the rating is  " + this.rating;
+  }
+}
+
+
+// b) The constructor for the class Movie will set the class property rating to "PG" as default when no rating is provided.
+ 
+class movie {
+    constructor(title, studio, rating){
+        this.title = title;
+        this.studio = studio;
+        this.rating = "PG";
+    }
+}
+
+// d) Write a piece of code that creates an instance of the class Movie with the title “Casino Royale”,
+      the studio “Eon Productions”, and the rating “PG­13”
+
+const CasinoRoyale = new movie( "Casino Royal", "Eon Productions", "PG13");
+
+
+
+
+
+
+
+
+
+
+
+
+
 Day 07:ARRAY METHODS
 
 a) Get all the countries from the Asia continent /region using the Filter function
@@ -30,3 +74,100 @@ request.onload = function(){
 }
 
 b) Get all the countries with a population of less than 2 lakhs using Filter function
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Document</title>
+    </head>
+    <body>
+        <script src="script1.js"></script>
+    </body>
+</html>
+
+script1.js
+
+let request = new XMLHttpRequest();
+request.open("GET","https://restcountries.com/v3.1/all");
+request.send();
+request.onload = function(){
+    let res = JSON.parse(request.response);
+    let popu=res.filter((element)=>{
+    return element.population<200000;
+})
+console.log(popu);
+    
+}
+
+c)Print the following details name, capital, flag using forEach function
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Document</title>
+    </head>
+    <body>
+        <script src="script1.js"></script>
+    </body>
+</html>
+
+script1.js
+
+let request = new XMLHttpRequest();
+request.open("GET","https://restcountries.com/v3.1/all");
+request.send();
+request.onload = function(){
+    let res = JSON.parse(request.response);
+    res.forEach((element)=>{
+    console.log(element.name,element.capital,element.flag);
+    })   
+}
+
+d)Print the total population of countries using reduce function
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Document</title>
+    </head>
+    <body>
+        <script src="script1.js"></script>
+    </body>
+</html>
+
+script1.js
+let request = new XMLHttpRequest();
+request.open("GET","https://restcountries.com/v3.1/all");
+request.send();
+request.onload = function(){
+    let res = JSON.parse(request.response);
+ let population=res.reduce((acc,element)=>{
+    return acc+element.population;
+},0)
+console.log(population); 
+}
+
+e)Print the country which uses US Dollars as currency.
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Document</title>
+    </head>
+    <body>
+        <script src="script1.js"></script>
+    </body>
+</html>
+
+script1.js
+let request = new XMLHttpRequest();
+request.open("GET","https://restcountries.com/v3.1/all");
+request.send();
+request.onload = function(){
+    let res = JSON.parse(request.response);
+ var cur=[];
+        for(i=0;i<res.length;i++){
+         if(res[i].currencies[0].code==="$"){
+            console.log("name:",res[i].name,"==>",res[i].currencies[0].code)
+        }
+    
+}
+}
+
+
