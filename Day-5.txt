@@ -119,6 +119,19 @@ return true;
 });
 ([1,2,1])
 
+g)Remove duplicates from an Array
+// Anonymous Function : 
+function dupli (array){
+                        let dup = [...new Set(array)];
+                        console.log(dup);
+                      }dupli([1,1,2,3,4,4,5,5]);
+
+/ IIEF
+
+(function(array){
+    let dup = [...new Set(array)];
+    console.log(dup);
+   })([1,1,2,3,4,4,5,5])
 
 3.Do the below programs in arrow functions.
 a)Print odd numbers in an array
@@ -166,3 +179,17 @@ primeNumber = (numArray) => {
     console.log(numArray);
 };
 primeNumber([1,2,3,4,5,6,7,8,9,10,11]);
+
+e)Return all the palindromes in an array
+Palindrome = (N) =>{
+        let str = "" + N;
+        let len = str.length;
+        for (let i = 0; i < parseInt(len / 2, 10); i++)
+        {
+            if (str[i] != str[len - 1 - i ])
+            return false;
+        }
+      return true;
+   
+    };
+   console.log (Palindrome([1,2,2]));
